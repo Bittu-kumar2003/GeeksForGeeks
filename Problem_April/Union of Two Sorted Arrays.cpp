@@ -1,4 +1,3 @@
-//{ Driver Code Starts
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -62,9 +61,6 @@ class Solution{
         return ans;
     }
 };
-
-//{ Driver Code Starts.
-
 int main() {
 	
 	int T;
@@ -96,4 +92,4 @@ int main() {
 	
 	return 0;
 }
-// } Driver Code Ends
+
