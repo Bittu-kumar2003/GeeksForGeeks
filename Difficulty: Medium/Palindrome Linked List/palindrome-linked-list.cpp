@@ -71,26 +71,27 @@ public:
         Node* middle = getMid(head);
 
         // Step 2: Reverse the second half of the list.
-        Node* secondHalf = reverseList(middle);
+        // Node* secondhalf=middle->next;
+        // middle->next=reverseList(head)
+        Node* secondhalf = reverseList(middle);
 
         // Step 3: Compare the first half and the reversed second half.
-        Node* firstHalf = head;
-        Node* temp = secondHalf; // To restore the list later.
+        Node* firsthalf = head;
+         Node* temp = secondhalf; // To restore the list later.
         bool isPalin = true;
 
         while (temp != NULL) {
-            if (firstHalf->data != temp->data) {
-                isPalin = false;
-                break;
+            if (firsthalf->data != temp->data) {
+               return false;
             }
-            firstHalf = firstHalf->next;
+            firsthalf= firsthalf->next;
             temp = temp->next;
         }
 
         // Step 4: Restore the list to its original state.
-        reverseList(secondHalf);
+        reverseList(temp);
 
-        return isPalin;
+        return true;
     }
 };
 
